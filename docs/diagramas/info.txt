@@ -1,0 +1,2 @@
+Dentro de esta carpeta se encuentran los diagramas empleados para la arquitectura del proyecto
+
