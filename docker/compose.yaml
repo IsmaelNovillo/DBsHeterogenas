@@ -1,0 +1,47 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb_db
+    environment:
+      MARIADB_ROOT_PASSWORD: "RootPass!123"
+      MARIADB_DATABASE: "appdb"
+      MARIADB_USER: "dba_mariadb"
+      MARIADB_PASSWORD: "DbaPass!123"
+    ports:
+      - "3307:3306"   # NO default
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ../sql/mariadb:/docker-entrypoint-initdb.d:ro
+    restart: unless-stopped
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver_db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "SaPass!12345"
+    ports:
+      - "11433:1433"  # NO default
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - ../sql/sqlserver:/init:ro
+    restart: unless-stopped
+
+  oracle:
+    image: gvenzl/oracle-free:latest
+    container_name: oracle_db
+    environment:
+      ORACLE_PASSWORD: "OraclePass!123"
+      APP_USER: "dba_oracle"
+      APP_USER_PASSWORD: "DbaPass!123"
+    ports:
+      - "1522:1521"   # NO default
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+      - ../sql/oracle:/container-entrypoint-initdb.d:ro
+    restart: unless-stopped
+
+volumes:
+  mariadb_data:
+  sqlserver_data:
+  oracle_data:
