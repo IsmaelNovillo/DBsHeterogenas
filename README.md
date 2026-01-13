@@ -190,7 +190,3 @@ Oracle Database Free puede tardar más tiempo en levantar. Ten paciencia si ves 
 El script ETL (sync.py) se ejecuta cada minuto de forma automática, pero puede ser ejecutado manualmente desde el entorno Python con:
 
 python sync.py
-
-
-
-Este es el **README completo** en formato **YAML** de GitHub con **negritas** y **cursivas**. Simplemente copia y pégalo en tu archivo `README.md` y ya estará listo para ser usado. ¡Todo está estructurado y listo para tu repositorio!
