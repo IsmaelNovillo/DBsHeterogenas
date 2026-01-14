@@ -1,5 +1,13 @@
 # 🚀 **Instrucciones de Instalación - Plataforma de Base de Datos Heterogénea Interconectada**
 
+## **PROBLEMATICA**
+La empresa DANIELITO_MAX es una compañía de ventas en línea que maneja un gran volumen de órdenes de clientes. La empresa utiliza una base de datos MariaDB para gestionar la información de los clientes y órdenes, pero está enfrentando dificultades operativas debido a la dispersión de datos, la falta de integración entre sistemas, y la falta de visibilidad en tiempo real de sus operaciones.
+Problemas actuales:
+
+- **Pérdida de órdenes y datos inconsistentes:** 
+- **Consultas ineficientes**
+- **Desempeño bajo y alta latencia**
+
 ## **Requisitos Previos**
 
 Antes de comenzar con la instalación, asegúrate de tener los siguientes requisitos:
